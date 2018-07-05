@@ -15,10 +15,13 @@ cabal-version:       >=1.10
 
 library
   hs-source-dirs:      src
-  ghc-options:         -Weverything
-  exposed-modules:     Language.Javascript.Optics
-  other-modules:       Language.Javascript.Optics.Prelude
+  ghc-options:         -Wall
+  exposed-modules:     Language.JavaScript.Optics
+  other-modules:       Language.JavaScript.Prelude
   build-depends:       base                                     >= 4.7 && < 5
+                     , hspec
+                     , language-javascript
+                     , lens
                      , protolude
   default-language:    Haskell2010
   default-extensions:  OverloadedStrings
@@ -29,9 +32,12 @@ test-suite language-javascript-optics-test
   hs-source-dirs:      test
   main-is:             Spec.hs
   build-depends:       base
+                     , hspec
+                     , language-javascript
                      , language-javascript-optics
+                     , lens
                      , protolude
-  ghc-options:         -Weverything
+  ghc-options:         -Wall
                        -threaded
                        -rtsopts
                        -with-rtsopts=-N
