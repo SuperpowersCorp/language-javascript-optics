@@ -3,6 +3,7 @@
 module Language.JavaScript.Optics where
 
 import Language.JavaScript.Prelude
+
 import Language.JavaScript.Parser
 import Language.JavaScript.Parser.AST
 
@@ -853,3 +854,16 @@ _JSBwOrAssign :: Prism' JSAssignOp JSAnnot
 _JSBwOrAssign = prism JSBwOrAssign $ \case
   JSBwOrAssign x -> Right x
   other          -> Left other
+
+_JSIdentName :: Prism' JSIdent (JSAnnot, String)
+_JSIdentName = prism g s
+  where
+    g (a, b) = JSIdentName a b
+    s = \case
+      JSIdentName a b -> Right (a, b)
+      other           -> Left other
+
+_JSIdentNone :: Prism' JSIdent ()
+_JSIdentNone = prism (const JSIdentNone) $ \case
+  JSIdentNone -> Right ()
+  other       -> Left other

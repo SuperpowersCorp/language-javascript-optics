@@ -17,7 +17,7 @@ library
   hs-source-dirs:      src
   ghc-options:         -Wall
   exposed-modules:     Language.JavaScript.Optics
-  other-modules:       Language.JavaScript.Prelude
+                     , Language.JavaScript.Prelude
   build-depends:       base                                     >= 4.7 && < 5
                      , hspec
                      , language-javascript

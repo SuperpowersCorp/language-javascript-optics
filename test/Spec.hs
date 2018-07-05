@@ -1,9 +1,10 @@
-import Protolude
+
 
 import Language.JavaScript.Prelude
-import Language.JavaScript.Parser
-import Language.JavaScript.Optics
 
+import Language.JavaScript.Optics
+import Language.JavaScript.Parser
+import Protolude
 import Test.Hspec
 
 main :: IO ()
