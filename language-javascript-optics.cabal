@@ -1,7 +1,6 @@
 name:                language-javascript-optics
 version:             0.1.0.0
--- synopsis:
--- description:
+synopsis:            Optics for language-javascript.
 homepage:            https://github.com/SuperpowersCorp/language-javascript-optics#readme
 license:             BSD3
 license-file:        LICENSE
@@ -17,33 +16,11 @@ library
   hs-source-dirs:      src
   ghc-options:         -Wall
   exposed-modules:     Language.JavaScript.Optics
-                     , Language.JavaScript.Prelude
   build-depends:       base                                     >= 4.7 && < 5
                      , hspec
                      , language-javascript
                      , lens
-                     , protolude
   default-language:    Haskell2010
-  default-extensions:  OverloadedStrings
-                     , NoImplicitPrelude
-
-test-suite language-javascript-optics-test
-  type:                exitcode-stdio-1.0
-  hs-source-dirs:      test
-  main-is:             Spec.hs
-  build-depends:       base
-                     , hspec
-                     , language-javascript
-                     , language-javascript-optics
-                     , lens
-                     , protolude
-  ghc-options:         -Wall
-                       -threaded
-                       -rtsopts
-                       -with-rtsopts=-N
-  default-language:    Haskell2010
-  default-extensions:  OverloadedStrings
-                     , NoImplicitPrelude
 
 source-repository head
   type:     git

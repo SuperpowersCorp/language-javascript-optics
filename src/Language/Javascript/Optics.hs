@@ -2,8 +2,7 @@
 
 module Language.JavaScript.Optics where
 
-import Language.JavaScript.Prelude
-
+import Control.Lens
 import Language.JavaScript.Parser
 import Language.JavaScript.Parser.AST
 
